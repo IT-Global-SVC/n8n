@@ -61,11 +61,6 @@ export const profileFields: INodeProperties[] = [
 				description: 'Return the settings preferences of the logged-in user',
 			},
 			{
-				name: 'Saved',
-				value: 'saved',
-				description: 'Return the saved posts for the user',
-			},
-			{
 				name: 'Trophies',
 				value: 'trophies',
 				description: 'Return the trophies of the logged-in user',
@@ -78,53 +73,6 @@ export const profileFields: INodeProperties[] = [
 				],
 				operation: [
 					'get',
-				],
-			},
-		},
-	},
-	{
-		displayName: 'Return All',
-		name: 'returnAll',
-		type: 'boolean',
-		default: false,
-		description: 'Return all results.',
-		displayOptions: {
-			show: {
-				resource: [
-					'profile',
-				],
-				operation: [
-					'get',
-				],
-				details: [
-					'saved',
-				],
-			},
-		},
-	},
-	{
-		displayName: 'Limit',
-		name: 'limit',
-		type: 'number',
-		default: 100,
-		description: 'The number of results to return.',
-		typeOptions: {
-			minValue: 1,
-			maxValue: 100,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'profile',
-				],
-				operation: [
-					'get',
-				],
-				details: [
-					'saved',
-				],
-				returnAll: [
-					false,
 				],
 			},
 		},

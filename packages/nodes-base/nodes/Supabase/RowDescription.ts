@@ -228,7 +228,7 @@ export const rowFields: INodeProperties[] = [
 	/* -------------------------------------------------------------------------- */
 	{
 		displayName: 'Select Conditions',
-		name: 'filters',
+		name: 'primaryKey',
 		type: 'fixedCollection',
 		typeOptions: {
 			multipleValues: true,

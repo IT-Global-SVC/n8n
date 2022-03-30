@@ -21,7 +21,7 @@ import {
 	buildOrQuery,
 	buildQuery,
 	supabaseApiRequest,
-	validateCredentials,
+	validateCrendentials,
 } from './GenericFunctions';
 
 import {
@@ -106,7 +106,7 @@ export class Supabase implements INodeType {
 		credentialTest: {
 			async supabaseApiCredentialTest(this: ICredentialTestFunctions, credential: ICredentialsDecrypted): Promise<INodeCredentialTestResult> {
 				try {
-					await validateCredentials.call(this, credential.data as ICredentialDataDecryptedObject);
+					await validateCrendentials.call(this, credential.data as ICredentialDataDecryptedObject);
 				} catch (error) {
 					return {
 						status: 'Error',

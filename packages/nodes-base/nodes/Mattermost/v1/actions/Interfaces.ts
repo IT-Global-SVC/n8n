@@ -5,7 +5,7 @@ import {
 } from 'n8n-workflow';
 
 type MattermostMap = {
-	channel: 'addUser' | 'create' | 'delete' | 'members' | 'restore' | 'statistics' | 'search';
+	channel: 'addUser' | 'create' | 'delete' | 'members' | 'restore' | 'statistics';
 	message: 'delete' | 'post' | 'postEphemeral';
 	reaction: 'create' | 'delete' | 'getAll';
 	user: 'create' | 'deactive' | 'getAll' | 'getByEmail' | 'getById' | 'invite';

@@ -184,7 +184,6 @@
 
 											<div class="binary-data-show-data-button-wrapper">
 												<n8n-button size="small" :label="$locale.baseText('runData.showBinaryData')" class="binary-data-show-data-button" @click="displayBinaryData(index, key)" />
-												<n8n-button v-if="isDownloadable(index, key)" size="small" type="outline" :label="$locale.baseText('runData.downloadBinaryData')" class="binary-data-show-data-button" @click="downloadBinaryData(index, key)" />
 											</div>
 
 										</div>
@@ -211,7 +210,6 @@
 import VueJsonPretty from 'vue-json-pretty';
 import {
 	GenericValue,
-	IBinaryData,
 	IBinaryKeyData,
 	IDataObject,
 	INodeExecutionData,
@@ -243,8 +241,6 @@ import { nodeHelpers } from '@/components/mixins/nodeHelpers';
 import { workflowRun } from '@/components/mixins/workflowRun';
 
 import mixins from 'vue-typed-mixins';
-
-import { saveAs } from 'file-saver';
 
 // A path that does not exist so that nothing is selected by default
 const deselectedPlaceholder = '_!^&*';
@@ -528,24 +524,6 @@ export default mixins(
 			dataItemClicked (path: string, data: object | number | string) {
 				this.state.value = data;
 			},
-			isDownloadable (index: number, key: string): boolean {
-				const binaryDataItem: IBinaryData = this.binaryData[index][key];
-				return !!(binaryDataItem.mimeType && binaryDataItem.fileName);
-			},
-			async downloadBinaryData (index: number, key: string) {
-				const binaryDataItem: IBinaryData = this.binaryData[index][key];
-
-				let bufferString = 'data:' + binaryDataItem.mimeType + ';base64,';
-				if(binaryDataItem.id) {
-					bufferString += await this.restApi().getBinaryBufferString(binaryDataItem.id);
-				} else {
-					bufferString += binaryDataItem.data;
-				}
-
-				const data = await fetch(bufferString);
-				const blob = await data.blob();
-				saveAs(blob, binaryDataItem.fileName);
-			},
 			displayBinaryData (index: number, key: string) {
 				this.binaryDataDisplayVisible = true;
 
@@ -723,10 +701,7 @@ export default mixins(
 
 					.binary-data-show-data-button-wrapper {
 						margin-top: 1.5em;
-
-						button {
-							margin: 0 0.5em 0 0;
-						}
+						text-align: center;
 					}
 
 					.label {

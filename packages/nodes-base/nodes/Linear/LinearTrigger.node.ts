@@ -35,7 +35,6 @@ export class LinearTrigger implements INodeType {
 			{
 				name: 'linearApi',
 				required: true,
-				testedBy: 'linearApiTest',
 			},
 		],
 		webhooks: [

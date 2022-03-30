@@ -1,10 +1,14 @@
 {
   "name": "n8n",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "0.170.0",
 =======
   "version": "0.168.1",
 >>>>>>> parent of c59fad2bc (:bookmark: Release n8n@0.168.2)
+=======
+  "version": "0.168.2",
+>>>>>>> parent of c06e7f5dc (feat(editor): Add download button for binary data (#2992))
   "description": "n8n Workflow Automation Tool",
   "license": "SEE LICENSE IN LICENSE.md",
   "homepage": "https://n8n.io",
@@ -129,10 +133,10 @@
     "lodash.get": "^4.4.2",
     "lodash.merge": "^4.6.2",
     "mysql2": "~2.3.0",
-    "n8n-core": "~0.111.0",
-    "n8n-editor-ui": "~0.137.0",
-    "n8n-nodes-base": "~0.168.0",
-    "n8n-workflow": "~0.93.0",
+    "n8n-core": "~0.109.0",
+    "n8n-editor-ui": "~0.135.0",
+    "n8n-nodes-base": "~0.166.0",
+    "n8n-workflow": "~0.91.0",
     "nodemailer": "^6.7.1",
     "oauth-1.0a": "^2.2.6",
     "open": "^7.0.0",

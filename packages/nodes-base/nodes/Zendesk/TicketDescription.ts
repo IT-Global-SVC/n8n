@@ -179,20 +179,12 @@ export const ticketFields: INodeProperties[] = [
 				type: 'options',
 				options: [
 					{
-						name: 'Closed',
-						value: 'closed',
+						name: 'Open',
+						value: 'open',
 					},
 					{
 						name: 'New',
 						value: 'new',
-					},
-					{
-						name: 'On-hold',
-						value: 'hold',
-					},
-					{
-						name: 'Open',
-						value: 'open',
 					},
 					{
 						name: 'Pending',
@@ -201,6 +193,10 @@ export const ticketFields: INodeProperties[] = [
 					{
 						name: 'Solved',
 						value: 'solved',
+					},
+					{
+						name: 'Closed',
+						value: 'closed',
 					},
 				],
 				default: '',
@@ -418,20 +414,12 @@ export const ticketFields: INodeProperties[] = [
 				type: 'options',
 				options: [
 					{
-						name: 'Closed',
-						value: 'closed',
+						name: 'Open',
+						value: 'open',
 					},
 					{
 						name: 'New',
 						value: 'new',
-					},
-					{
-						name: 'On-hold',
-						value: 'hold',
-					},
-					{
-						name: 'Open',
-						value: 'open',
 					},
 					{
 						name: 'Pending',
@@ -440,6 +428,10 @@ export const ticketFields: INodeProperties[] = [
 					{
 						name: 'Solved',
 						value: 'solved',
+					},
+					{
+						name: 'Closed',
+						value: 'closed',
 					},
 				],
 				default: '',
@@ -737,20 +729,12 @@ export const ticketFields: INodeProperties[] = [
 				},
 				options: [
 					{
-						name: 'Closed',
-						value: 'closed',
+						name: 'Open',
+						value: 'open',
 					},
 					{
 						name: 'New',
 						value: 'new',
-					},
-					{
-						name: 'On-hold',
-						value: 'hold',
-					},
-					{
-						name: 'Open',
-						value: 'open',
 					},
 					{
 						name: 'Pending',
@@ -759,6 +743,10 @@ export const ticketFields: INodeProperties[] = [
 					{
 						name: 'Solved',
 						value: 'solved',
+					},
+					{
+						name: 'Closed',
+						value: 'closed',
 					},
 				],
 				default: '',
