@@ -1,6 +1,10 @@
 {
   "name": "n8n",
+<<<<<<< HEAD
   "version": "0.170.0",
+=======
+  "version": "0.168.1",
+>>>>>>> parent of c59fad2bc (:bookmark: Release n8n@0.168.2)
   "description": "n8n Workflow Automation Tool",
   "license": "SEE LICENSE IN LICENSE.md",
   "homepage": "https://n8n.io",
